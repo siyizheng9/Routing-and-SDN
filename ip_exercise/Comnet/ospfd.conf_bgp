@@ -1,0 +1,15 @@
+hostname Comnet
+
+log file /var/log/quagga/ospfd.log
+log monitor
+log stdout
+log syslog
+
+password Quagga
+
+router ospf
+
+network 192.168.24.36/30 area 2.2.2.2
+# network 192.168.24.32/30 area 0.0.0.0
+redistribute bgp
+redistribute connected

@@ -1,0 +1,10 @@
+hostname   Netcafe
+
+log file /var/log/quagga/zebra.log
+log monitor
+log stdout
+log syslog
+
+password Quagga
+
+ip route 0.0.0.0/0 192.168.24.57

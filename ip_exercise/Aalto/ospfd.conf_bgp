@@ -1,0 +1,20 @@
+hostname   Aalto
+
+log file /var/log/quagga/ospfd.log
+log monitor
+log stdout
+log syslog
+
+password Quagga
+
+router ospf 
+
+network 192.168.24.24/30 area 1.1.1.1
+network 192.168.24.20/30 area 1.1.1.1
+# network 192.168.24.28/30 area 0.0.0.0
+redistribute bgp
+redistribute connected
+
+interface eth2
+ip ospf cost 30
+
